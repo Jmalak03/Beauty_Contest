@@ -1,4 +1,5 @@
 ﻿using Beauty_Contest.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -22,6 +23,25 @@ namespace Beauty_Contest.Controllers
         {
             return View();
         }
+
+
+        public IActionResult Requisitosparticipantes()
+        {
+            return View();
+        }
+
+
+        public IActionResult Agregarparticipante()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Administrador, Votante")]
+        public IActionResult Modificarparticipantes()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
