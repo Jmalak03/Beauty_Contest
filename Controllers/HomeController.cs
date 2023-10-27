@@ -36,8 +36,13 @@ namespace Beauty_Contest.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Administrador, Votante")]
-        public IActionResult Modificarparticipantes()
+        [Authorize(Roles = "Administrador")]
+        public IActionResult Modificar()
+        {
+            return View();
+        }
+
+        public IActionResult Votos()
         {
             return View();
         }

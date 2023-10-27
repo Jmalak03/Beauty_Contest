@@ -40,13 +40,22 @@
                         </li>
 
 
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Votos"> Votaciones </a>
+                        </li>
 
-                        
-                    
+
+
+
+                        @if (User.IsInRole("Administrador"))
+                        {
                             <li class="nav-item">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Modificarparticipantes">Modificar participante </a>
+                                <a class="nav-link text-white" asp-area="" asp-controller="Participante" asp-action="Modificar"> Modificar  </a>
                             </li>
+                        }
                         
+
+
 
 
 
