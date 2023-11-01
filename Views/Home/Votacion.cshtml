@@ -1,0 +1,24 @@
+﻿@model VotacionModel
+
+@{
+    ViewData["Title"] = "Votaciones";
+}
+
+<!DOCTYPE html>
+
+<head runat="server">
+    <title>Concurso de belleza</title>
+</head>
+
+
+<body>
+    <form Id="form1" runat="server">
+        <div>
+            <h1>Concurso de belleza</h1>
+            <asp : ButtonId="VoteButton" runat="server" text="Votar" OnClick="VoteButton_Click" />
+            <p> Resultados: </p>
+            <asp : Label Id="ResultLabel" runat="server" Text="0" />
+        </div>
+    </form>
+</body>
+</html>
