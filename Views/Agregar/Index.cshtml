@@ -1,0 +1,105 @@
+﻿@* @* @model IEnumerable<MyMVC.Models.Person>
+@{
+    ViewData["Title"] = "Index";
+}
+ *@ 
+ @model List<AgregarModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                @Html.Label("Nombre:")
+                @Html.TextBox("firstName", null, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Apellido:")
+                @Html.TextBox("lastName", null, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Edad:")
+                @Html.TextBox("Age", null, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.Label("Fecha de Nacimiento:")
+                @Html.TextBox("Fecha de Nacimiento", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Nacionalidad:")
+                @Html.TextBox("Nacionalidad", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Peso:")
+                @Html.TextBox("Peso", null, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                @Html.Label("Altura:")
+                @Html.TextBox("Altura", null, new { @class = "form-control" })
+            </div>
+            <hr />
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.firstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha Nacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nacionalidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Peso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Altura)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.firstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.lastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha Nacimiento)
+                </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.Nacionalidad)
+                </td>
+                 <td>
+                    @Html.DisplayFor(modelItem => item.Peso)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Altura)
+                </td>
+            </tr>
+        }
