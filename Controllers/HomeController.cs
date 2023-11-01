@@ -31,10 +31,6 @@ namespace Beauty_Contest.Controllers
         }
 
 
-        public IActionResult Agregarparticipante()
-        {
-            return View();
-        }
 
         [Authorize(Roles = "Administrador")]
         public IActionResult Modificar()
