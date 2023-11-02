@@ -3,7 +3,7 @@
     ViewData["Title"] = "Index";
 }
  *@ 
- @model List<AgregarModel>
+ @model AgregarModel
 @{
     ViewData["Title"] = "Index_Agregar";
 }
@@ -82,8 +82,10 @@
             </th>
         </tr>
     </thead>
+    </table>
 
     <tbody>
+        
         @foreach (var item in Model)
         {
             <tr>
@@ -112,4 +114,6 @@
                     @Html.DisplayFor(modelItem => item.ModeloId)
                 </td>
             </tr>
+            
         }
+    </tbody>

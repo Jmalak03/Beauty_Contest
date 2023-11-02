@@ -13,7 +13,7 @@ namespace Beauty_Contest.Models
         public string Altura { get; set; }
         public string Nacionalidad { get; set; }
         public int ModeloId { get; set; }
-    
+
     }
     
 }

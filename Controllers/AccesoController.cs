@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using Beauty_Contest.Data;
 using Beauty_Contest.Models;
+using Beauty_Contest.Models.Data;
 
 namespace Beauty_Contest.Controllers
 {
