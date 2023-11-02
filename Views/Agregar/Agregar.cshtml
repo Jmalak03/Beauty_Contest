@@ -5,7 +5,7 @@
  *@ 
  @model List<AgregarModel>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Index_Agregar";
 }
 <h2>Index</h2>
 
@@ -14,22 +14,22 @@
         <form method="post">
             <div class="form-group">
                 @Html.Label("Nombre:")
-                @Html.TextBox("firstName", null, new { @class = "form-control" })
+                @Html.TextBox("Nombre", null, new { @class = "form-control" })
             </div>
 
             <div class="form-group">
-                @Html.Label("Apellido:")
-                @Html.TextBox("lastName", null, new { @class = "form-control" })
+                @Html.Label("Apellidos:")
+                @Html.TextBox("Apellidos", null, new { @class = "form-control" })
             </div>
 
             <div class="form-group">
                 @Html.Label("Edad:")
-                @Html.TextBox("Age", null, new { @class = "form-control" })
+                @Html.TextBox("Edad", null, new { @class = "form-control" })
             </div>
 
             <div class="form-group">
                 @Html.Label("Fecha de Nacimiento:")
-                @Html.TextBox("Fecha de Nacimiento", null, new { @class = "form-control" })
+                @Html.TextBox("FechaNam", null, new { @class = "form-control" })
             </div>
             <div class="form-group">
                 @Html.Label("Nacionalidad:")
@@ -43,6 +43,10 @@
                 @Html.Label("Altura:")
                 @Html.TextBox("Altura", null, new { @class = "form-control" })
             </div>
+             <div class="form-group">
+                @Html.Label("ModeloId:")
+                @Html.TextBox("ModeloId", null, new { @class = "form-control" })
+            </div>
             <hr />
             <button type="submit">Enviar</button>
         </form>
@@ -53,16 +57,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.firstName)
+                @Html.DisplayNameFor(model => model.Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.lastName)
+                @Html.DisplayNameFor(model => model.Apellidos)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Age)
+                @Html.DisplayNameFor(model => model.Edad)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fecha Nacimiento)
+                @Html.DisplayNameFor(model => model.FechaNam)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nacionalidad)
@@ -73,6 +77,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.Altura)
             </th>
+             <th>
+                @Html.DisplayNameFor(model => model.ModeloId)
+            </th>
         </tr>
     </thead>
 
@@ -81,16 +88,16 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.firstName)
+                    @Html.DisplayFor(modelItem => item.Nombre)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.lastName)
+                    @Html.DisplayFor(modelItem => item.Apellidos)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Age)
+                    @Html.DisplayFor(modelItem => item.Edad)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Fecha Nacimiento)
+                    @Html.DisplayFor(modelItem => item.FechaNam)
                 </td>
                  <td>
                     @Html.DisplayFor(modelItem => item.Nacionalidad)
@@ -100,6 +107,9 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Altura)
+                </td>
+                  <td>
+                    @Html.DisplayFor(modelItem => item.ModeloId)
                 </td>
             </tr>
         }

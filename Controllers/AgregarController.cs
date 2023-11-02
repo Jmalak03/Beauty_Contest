@@ -8,17 +8,17 @@ namespace Beauty_Contest.Controllers
         private List<AgregarModel> personasList = new List<AgregarModel>() { };
         public IActionResult Index(AgregarModel persona)
         {
-            return View("Index");
+            return View("Agregar");
         }
 
         [HttpPost]
-        public IActionResult Index(AgregarModel persona)
+        public IActionResult Index_Agregar(AgregarModel persona)
         {
 
 
             personasList.Add(persona);
 
-            return View("Index");
+            return View("Agregar");
 
         }
     }
